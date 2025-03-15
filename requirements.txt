@@ -3,3 +3,4 @@ sentence-transformers
 openai-whisper
 whisper
 chromadb
+numpy==1.26.4
