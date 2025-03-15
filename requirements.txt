@@ -2,3 +2,4 @@ scikit-learn
 sentence-transformers
 openai-whisper
 whisper
+chromadb
