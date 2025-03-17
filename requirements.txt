@@ -5,3 +5,10 @@ whisper
 chromadb
 numpy==1.26.4
 streamlit==1.43.2
+streamlit
+torch==2.6.0
+numpy
+pandas
+scipy
+nltk
+transformers
