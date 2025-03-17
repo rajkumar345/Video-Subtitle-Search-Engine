@@ -19,8 +19,8 @@ def search_audio(audio_path, collection_name="subtitles", top_k=5, model_size="s
     # Initialize ChromaDB
     client = chromadb.PersistentClient(path="./chroma_db")
 
-    # Check if the collection exists
-    collection_names = client.list_collections()  # Returns a list of names
+    # ✅ Check if the collection exists (Fixed for ChromaDB v0.6.0+)
+    collection_names = client.list_collections()  # Now returns only collection names
     if collection_name not in collection_names:
         print(f"Collection '{collection_name}' not found. Creating a new one...")
         collection = client.create_collection(name=collection_name)

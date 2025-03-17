@@ -12,3 +12,6 @@ pandas
 scipy
 nltk
 transformers
+numpy==1.24 
+sympy==1.13.1
+numpy==2.1
