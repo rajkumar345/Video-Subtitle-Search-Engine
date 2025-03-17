@@ -6,7 +6,9 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sentence_transformers import SentenceTransformer, util
 from transcribe_audio import transcribe_audio
-from search_audio import search_audio
+import search_audio
+import sys
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 # Set page title and layout
 st.set_page_config(page_title="🎬 Video Subtitles Search Engine", layout="wide")
@@ -126,7 +128,7 @@ elif option == "🔍 Search Audio":
             f.write(search_file.read())
 
         st.text("Searching for relevant subtitles... 🔎")
-        results = search_audio("query_audio.wav")
+        results = search_audio.search_audio("query_audio.wav")
 
         st.subheader("🎯 Most Relevant Subtitle Matches:")
         for idx, result in enumerate(results):
